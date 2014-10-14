@@ -25,4 +25,8 @@ class Test_NumeroComplejo < Test::Unit::TestCase
         assert_equal("(-1,3i)",(@num-@num2).to_s,"Error suma complejos")
     end
 
+    def test_multiplicacion
+	    assert_equal("(8,10i)",(@num*2).to_s,"Error multiplicar por Fixnum")
+	    assert_equal("(10,33i)",(@num*@num2).to_s,"Error multiplicacion complejos")
+    end
 end
