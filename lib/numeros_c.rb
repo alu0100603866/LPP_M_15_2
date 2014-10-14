@@ -20,5 +20,17 @@ class Numero_c
 			puts "Error, imposible sumar"
 		end
 	end
+
+    def -(other)
+        if (other.instance_of? Fixnum)
+            return Numero_c.new((@real-other),@imag)
+        end
+
+    if (other.instance_of? Numero_c)
+        return Numero_c.new(@real-other.real,@imag-other.imag)
+    else
+        puts "Error, imposible restar"
+    end
+
 end
 
