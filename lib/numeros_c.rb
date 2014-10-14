@@ -1,5 +1,6 @@
 class Numero_c
 	attr_reader :real, :imag
+    
 	def initialize(r,i)
 		@real = r
 		@imag = i
@@ -32,5 +33,6 @@ class Numero_c
         puts "Error, imposible restar"
     end
 
+end
 end
 
