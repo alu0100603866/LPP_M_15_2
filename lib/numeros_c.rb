@@ -12,7 +12,7 @@ class Numero_c
 
 	def +(other)
 		if (other.instance_of? Fixnum)
-			return Numero_c.new((@real+other),@imag)
+			return Numero_c.new(@real+other,@imag)
 		end
 
 		if (other.instance_of? Numero_c)
@@ -24,15 +24,24 @@ class Numero_c
 
     def -(other)
         if (other.instance_of? Fixnum)
-            return Numero_c.new((@real-other),@imag)
+		   	return Numero_c.new(@real-other,@imag)
         end
+		if (other.instance_of? Numero_c)
+			return Numero_c.new(@real-other.real,@imag-other.imag)
+        else
+			puts "Error, imposible restar"
+        end
+	end
 
-    if (other.instance_of? Numero_c)
-        return Numero_c.new(@real-other.real,@imag-other.imag)
-    else
-        puts "Error, imposible restar"
+    def *(other)
+        if (other.instance_of? Fixnum)
+            return Numero_c.new(@real*other,@imag*other)
+        end
+        if (other.instance_of? Numero_c)
+            return Numero_c.new(@real*other.real-@imag*other.imag,@real*other.imag+@imag*other.real)
+        else
+            puts "Error, imposible multiplicar"
+        end
     end
-
-end
 end
 
