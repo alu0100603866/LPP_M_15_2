@@ -35,4 +35,9 @@ class Test_NumeroComplejo < Test::Unit::TestCase
         assert_equal("(2.0,3.0i)",(@num/2).to_s,"Error multiplicar por Fixnum")
         assert_equal("(2.8,1.6i)",(@num/@numD).to_s,"Error division complejos")
     end
+    
+    def test_escalar
+        assert_equal("(12.0,18.0i)",(3*@num).to_s)
+    end
+    
 end

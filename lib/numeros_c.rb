@@ -55,5 +55,10 @@ class Numero_c
             puts "Error, imposible dividir"
         end
     end
+
+    def coerce(other)
+        return self, other
+    end
+
 end
 
