@@ -16,3 +16,4 @@ Numeros complejos:
 Realizado por:
 
 * Juan Tareq Gonzalez de Chavez Perez
+* Jose Manuel Hernandez Hernandez

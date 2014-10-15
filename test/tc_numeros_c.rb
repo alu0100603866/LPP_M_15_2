@@ -37,7 +37,7 @@ class Test_NumeroComplejo < Test::Unit::TestCase
     end
     
     def test_escalar
-        assert_equal("(12.0,18.0i)",(3*@num).to_s)
+        assert_equal("(12.0,18.0i)",(3*@num).to_s,"Error en la multiplicacion escalar")
     end
     
 end
